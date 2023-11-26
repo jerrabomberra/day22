@@ -1,4 +1,4 @@
-from turtle import Turtle
+from turtle import Turtle, Screen
 
 
 class Paddle(Turtle):
@@ -12,14 +12,14 @@ class Paddle(Turtle):
 
     def go_up(self):
         new_y = self.ycor() + 20
-        if self.ycor() == 280:
+        if self.ycor() == 270:
             self.goto(self.xcor(), self.ycor() - 20)
         else:
             self.goto(self.xcor(), self.ycor() + 20)
 
     def go_down(self):
         new_y = self.ycor() - 20
-        if self.ycor() == -280:
+        if self.ycor() == -270:
             self.goto(self.xcor(), self.ycor() + 20)
         else:
             self.goto(self.xcor(), self.ycor() - 20)
